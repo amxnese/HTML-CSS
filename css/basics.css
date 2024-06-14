@@ -1,11 +1,11 @@
-body{
-  font-family: 'Courier New', Courier, monospace;
+body {
+  font-family: "Courier New", Courier, monospace;
   background-color: antiquewhite;
   font-size: larger;
   text-align: center;
 }
 
-body{
+body {
   /* padding */
   /* a Shorthand property to set values for the thickness of the padding area.
   If left is omitted, it is the same as right. If bottom is omitted it is the 
@@ -14,7 +14,7 @@ body{
   /* top right bottom left */
   /* 5px 5px   5px    5px */
   padding: 5px;
-  
+
   /* top right bottom left */
   /* 5px 10px  5px    10px */
   padding: 5px 10px;
@@ -40,7 +40,7 @@ body {
 
 .header {
   /* background */
-  background-image: url(../imgs/Laptop\ Wallpaper.jpg); /* setting an image as a background */
+  background-image: url(../imgs/windows.jpg); /* setting an image as a background */
   background-repeat: repeat; /* default value is repeat, the image will keep on repeating both on x and y axis */
   background-repeat: no-repeat; /* prevents image from repeating */
   background-repeat: repeat-y; /* the image will repeat only on the y axis */
@@ -73,9 +73,9 @@ element {
 }
 
 /* nesting */
-div p{
+div p {
   /* this will affect all p tags that are inside of a div */
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 /* dimensions */
@@ -120,4 +120,44 @@ element {
   white-space: normal; /* controls the behavior of the element's content when it encounters a white space, normal is the default value, it add a line break whenever it reaches a white space */
   white-space: nowrap; /* does not add a break line after reaching a white space */
   word-break: break-word; /* prevents overflow by breaking words that are not meant to be broke */
+}
+
+/* inheretance */
+/* 
+Inheritance in CSS is a mechanism by which some CSS properties applied to a parent element are passed down 
+to its child elements. This can help maintain a consistent style across a webpage without needing to repeatedly 
+apply the same styles to multiple elements. However, not all CSS properties are inherited.
+*/
+/* 
+some inhereted properties include: color, font-family, font-size, font-weight, font-style, font-variant, line-height,
+text-align, text-indent, text-transform, text-shadow, letter-spacing, word-spacing, visibility 
+*/
+element {
+  padding: inherit; /* the element will inherit the padding that were gave to his parent */
+}
+
+/* cursor */
+.default-cursor {
+  cursor: default;
+}
+.pointer-cursor {
+  cursor: pointer;
+}
+.text-cursor {
+  cursor: text;
+}
+.move-cursor {
+  cursor: move;
+}
+.help-cursor {
+  cursor: help;
+}
+.not-allowed-cursor {
+  cursor: not-allowed;
+}
+.wait-cursor {
+  cursor: wait;
+}
+.img-cursor {
+  cursor: url('../imgs/windows.jpg'), auto;
 }
