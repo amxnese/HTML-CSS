@@ -98,3 +98,26 @@ element {
   overflow-x: auto;
   overflow-y: auto;
 }
+
+/* text */
+.header2 {
+  /* text shadow : H-shadow V-shadow blue color */
+  text-shadow: 1px 1px 1px rgb(92, 92, 249);
+  text-align: center; /* controls the alignment of the text, we can also use right or left */
+  vertical-align: middle; /* works the same as text-align but vertically, we use middle, top, bottom */
+  direction: ltr; /* ltr for left to right, direction controls the direction of the context */
+  text-decoration: none; /* used to decorate the text but mostly used to remove by default decorations by setting it to none */
+  text-transform: capitalize; /* mostly used to change modify text capitalization */
+  text-overflow: ellipsis; /* cuts the the additional text and adds three dots to hint that the text is cut */
+}
+
+/* spacing */
+.header {
+  letter-spacing: 2px; /* controls the space between letters */
+  text-indent: 0; /* controls the text indentation */
+  line-height: 1.6; /* controls the space between the lines vertically, 1.6 stands for 160% */
+  word-spacing: 1px; /* controls the space between words */
+  white-space: normal; /* controls the behavior of the element's content when it encounters a white space, normal is the default value, it add a line break whenever it reaches a white space */
+  white-space: nowrap; /* does not add a break line after reaching a white space */
+  word-break: break-word; /* prevents overflow by breaking words that are not meant to be broke */
+}
