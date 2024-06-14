@@ -34,7 +34,7 @@ body {
   /* top right bottom left */
   /* 5px 10px  15px   20px */
   margin: 5px 10px 15px 20px;
-  
+
   margin: auto; /* sets all sides to auto, spreads all additional spaces equally to each side */
 }
 
@@ -50,10 +50,25 @@ body {
   background-position: left top; /* the first value is for x and the second is for y, we can use right left top bottom and we can also use pixels and percentage */
   background-size: auto; /* default is auto, we can use cover so the background image covers all the screen, and we can use contain so the image be fully visible */
   background-size: 170px 140px; /* we can also use pixels or percentage to controll the image size, first value is for x and second is for y */
-}
-
-
-
-.header {
   color: aliceblue;
 }
+
+.header2 {
+  width: 70%;
+  margin: auto;
+
+  /* border */
+  border-width: 0 4px 3px 4px; /* a shorthand as padding and margin */
+  border-color: rgb(119, 119, 119); /* a shorthand also */
+  border-style: solid solid dashed; /* also a shorthand */
+}
+
+element {
+  /* display */
+  display: block; /* default value, add break lines before and after the element, respects margin and padding */
+  display: inline; /* do not add break lines (elements are on the same line), respects margin and padding but only from left and right */
+  display: inline-block; /* same as inline but respects margin and padding from all sides */
+  display: none; /* element does not exist anymore */
+  visibility: hidden; /* element exists but not visible, it is still holding its place */
+}
+
