@@ -3,7 +3,9 @@ body{
   background-color: antiquewhite;
   font-size: larger;
   text-align: center;
+}
 
+body{
   /* padding */
   /* a Shorthand property to set values for the thickness of the padding area.
   If left is omitted, it is the same as right. If bottom is omitted it is the 
@@ -23,6 +25,17 @@ body{
 
   /* we can also set each side by itself */
   padding-right: 5px;
+}
+
+body {
+  /* margin */
+  /* Shorthand property to set values for the thickness of the margin area. all other padding properties applies the same on margin */
+
+  /* top right bottom left */
+  /* 5px 10px  15px   20px */
+  margin: 5px 10px 15px 20px;
+  
+  margin: auto; /* sets all sides to auto, spreads all additional spaces equally to each side */
 }
 
 .header {
