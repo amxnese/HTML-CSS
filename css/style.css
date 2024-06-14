@@ -1,0 +1,46 @@
+body{
+  font-family: 'Courier New', Courier, monospace;
+  background-color: antiquewhite;
+  font-size: larger;
+  text-align: center;
+
+  /* padding */
+  /* a Shorthand property to set values for the thickness of the padding area.
+  If left is omitted, it is the same as right. If bottom is omitted it is the 
+  same as top, if right is omitted it is the same as top */
+
+  /* top right bottom left */
+  /* 5px 5px   5px    5px */
+  padding: 5px;
+  
+  /* top right bottom left */
+  /* 5px 10px  5px    10px */
+  padding: 5px 10px;
+
+  /* top right bottom left */
+  /* 5px 10px  15px   10px*/
+  padding: 5px 10px 15px;
+
+  /* we can also set each side by itself */
+  padding-right: 5px;
+}
+
+.header {
+  /* background */
+  background-image: url(../imgs/Laptop\ Wallpaper.jpg); /* setting an image as a background */
+  background-repeat: repeat; /* default value is repeat, the image will keep on repeating both on x and y axis */
+  background-repeat: no-repeat; /* prevents image from repeating */
+  background-repeat: repeat-y; /* the image will repeat only on the y axis */
+  background-repeat: repeat-x; /* the image will repeat only on the x axis */
+  background-attachment: fixed; /* the background will be fixed the screen even when scrolling */
+  background-attachment: scroll; /* default value is scroll, when scrolling the background will not follow and will stay on its postion */
+  background-position: left top; /* the first value is for x and the second is for y, we can use right left top bottom and we can also use pixels and percentage */
+  background-size: auto; /* default is auto, we can use cover so the background image covers all the screen, and we can use contain so the image be fully visible */
+  background-size: 170px 140px; /* we can also use pixels or percentage to controll the image size, first value is for x and second is for y */
+}
+
+
+
+.header {
+  color: aliceblue;
+}
