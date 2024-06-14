@@ -72,3 +72,29 @@ element {
   visibility: hidden; /* element exists but not visible, it is still holding its place */
 }
 
+/* nesting */
+div p{
+  /* this will affect all p tags that are inside of a div */
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* dimensions */
+element {
+  width: 50px; /* sets the width to 50px */
+  height: 50px; /* sets the height to 50px */
+  width: fit-content; /* sets the width as wide as the content inside */
+  min-width: 50px; /* the element's widht will be 50px but will also be able to expand */
+  min-height: 50px; /* same as told */
+  max-width: 200px; /* now the width can't exceed 200px, meaning that the element has an interval of 50 and 200 px to expand in */
+  max-height: 400px; /* same */
+}
+
+/* overflow */
+element {
+  overflow: hidden; /* if the content of an element exceeds its space it will be hidden */
+  overflow: scroll; /* gives the element a scroller */
+  overflow: auto; /* acts like hidden if the content fits, and acts like scroll if the content does not fit */
+  /* we can also specify the overflow behavior of a specific axis (x or y)  */
+  overflow-x: auto;
+  overflow-y: auto;
+}
