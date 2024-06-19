@@ -1,0 +1,41 @@
+/* The calc() function in CSS is a powerful tool that allows you to perform calculations to 
+determine CSS property values. This can be particularly useful when you need to combine different
+units or create responsive designs. Here’s how you can use calc() in various scenarios:
+
+Basic Syntax
+The basic syntax for calc() is: 
+  property: calc(expression); 
+*/
+/* Examples: */
+/* ============================== */
+element{
+  width: calc(100% - 50px);
+}
+.responsive-element {
+  font-size: calc(16px + 0.5vw);
+}
+.sidebar {
+  width: calc(25% - 20px);
+}
+.content {
+  width: calc(75% - 20px);
+}
+/* ============================== */
+
+
+
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+.sidebar {
+  width: calc(20% - 10px);
+  background-color: lightblue;
+  padding: 10px;
+}
+.content {
+  width: calc(80% - 10px);
+  background-color: lightcoral;
+  padding: 10px;
+}
