@@ -1,0 +1,109 @@
+/* 
+In CSS, the position property specifies how an element is positioned in the document. 
+There are five different position values:
+
+static (default)
+relative
+absolute
+fixed
+sticky
+Each of these values changes how the element is placed and how it interacts with other elements.
+Here’s an overview of each value:
+
+1. static
+Default positioning for elements.
+Elements are positioned according to the normal document flow.
+Top, right, bottom, and left properties have no effect.
+*/
+.element {
+  position: static;
+}
+
+/* 
+2. relative
+Positioned relative to its normal position.
+Top, right, bottom, and left properties adjust the element from its normal position without 
+affecting other elements.
+*/
+.element {
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+
+/* 
+3. absolute
+Positioned relative to the nearest positioned ancestor (anything except static). If no 
+such ancestor exists, it uses the initial containing block (often the viewport).
+Removed from the normal document flow, so it doesn’t affect the position of other elements.
+*/
+.container {
+  position: relative;
+}
+.element {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+/* 
+4. fixed
+Positioned relative to the viewport (browser window), so it stays in the same place even 
+when the page is scrolled.
+Removed from the normal document flow.
+*/
+.element {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+}
+
+/* 
+5. sticky
+Positioned based on the user’s scroll position.
+Behaves like relative until a given offset position is met in the viewport, then it behaves
+like fixed.
+*/
+.element {
+  position: sticky;
+  top: 0; /* Element will stick to the top of the viewport when you reach its scroll position */
+}
+
+
+/* =========================================================================================== */
+
+
+.static {
+  position: static;
+  background-color: lightblue;
+}
+.relative {
+  position: relative;
+  top: 10px;
+  left: 20px;
+  background-color: lightgreen;
+}
+.absolute {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: lightcoral;
+}
+.fixed {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: lightpink;
+}
+.sticky {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0;
+  background-color: lightyellow;
+}
+.container {
+  height: 200px;
+  border: 1px solid #000;
+  overflow: auto;
+  margin-top: 70px;
+}
