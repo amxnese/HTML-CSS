@@ -1,0 +1,134 @@
+/* 
+Pseudo-classes in CSS are used to define the special states of an element. They can be applied 
+to elements based on their state or position in the document tree, even if they don't have any 
+specific class attributes applied to them. Here's a rundown of some commonly used pseudo-classes:
+*/
+
+/* Structural Pseudo-classes
+These pseudo-classes target elements based on their position in the document structure. */
+
+/* :first-child: Targets the first child of its parent. */
+p:first-child {
+  color: red;
+}
+/* :last-child: Targets the last child of its parent. */
+p:last-child {
+  color: blue;
+}
+/* :nth-child(n): Targets the nth child of its parent. The n can be a number, keyword, or formula. */
+p:nth-child(2) {
+  color: green;
+}
+/* :nth-of-type(n): Targets the nth child of its parent, of a specific type */
+p:nth-of-type(3) {
+  color: orange;
+}
+/* :only-child: Targets an element that is the only child of its parent */
+p:only-child {
+  color: purple;
+}
+
+
+/* Dynamic Pseudo-classes
+These pseudo-classes target elements based on user interaction.*/
+
+/* :hover: Targets an element when the mouse hovers over it */
+a:hover {
+  color: red;
+}
+
+/* :focus: Targets an element when it has focus (e.g., when an input is selected). */
+input:focus {
+  border-color: blue;
+}
+
+/* :active: Targets an element that is being activated by the user (e.g., clicked on) */
+a:active {
+  color: green;
+}
+
+/* UI State Pseudo-classes
+These pseudo-classes are used for styling elements based on the state of a form element. */
+
+/* :enabled: Targets form elements that are enabled. */
+input:enabled {
+  background-color: white;
+}
+
+/* :disabled: Targets form elements that are disabled. */
+input:disabled {
+  background-color: gray;
+}
+
+/* :checked: Targets checked input elements (checkboxes or radio buttons) */
+input:checked {
+  background-color: yellow;
+}
+
+/* Other Pseudo-classes */
+
+/* :not(selector): Targets elements that do not match the selector */
+p:not(.special) {
+  color: black;
+}
+
+/* :empty: Targets elements that have no children */
+p:empty {
+  display: none;
+}
+
+
+/* Pseudo-elements in CSS are used to style specific parts of an element. They allow
+you to apply styles to elements in ways that can't be done using simple selectors alone. 
+Pseudo-elements are written with a double colon (::) before their name, although older 
+versions of CSS (CSS2) also supported a single colon (:). Here are some commonly used 
+pseudo-elements: */
+
+/* Commonly Used Pseudo-elements */
+
+/* ::before
+The ::before pseudo-element inserts content before the content of an element. */
+p::before {
+  content: "Note: ";
+  font-weight: bold;
+  color: red;
+}
+
+/* ::after
+The ::after pseudo-element inserts content after the content of an element. */
+p::after {
+  content: " - End of paragraph.";
+  font-style: italic;
+  color: blue;
+}
+
+/* ::first-line
+The ::first-line pseudo-element applies styles to the first line of a block-level element. */
+p::first-line {
+  font-weight: bold;
+  color: green;
+}
+
+/* ::first-letter
+The ::first-letter pseudo-element applies styles to the first letter of a block-level element. */
+p::first-letter {
+  font-size: 2em;
+  color: orange;
+}
+
+/* ::selection
+The ::selection pseudo-element applies styles to the portion of an element that has been 
+selected by the user (e.g., when highlighting text with the mouse). */
+::selection {
+  background: yellow;
+  color: black;
+}
+
+
+/* Combining Pseudo-elements with Pseudo-classes
+Pseudo-elements can be combined with pseudo-classes for more advanced styling. For example, 
+you can style the first letter of a paragraph only when the paragraph is hovered over: */
+p:hover::first-letter {
+  font-size: 3em;
+  color: purple;
+}
