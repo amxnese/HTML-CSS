@@ -1,0 +1,42 @@
+/* 
+In CSS, transitions allow you to change property values smoothly (over a given duration). 
+To create a transition, you typically specify the properties you want to animate, 
+the duration of the animation, the timing function, and optionally a delay before the
+animation starts.
+*/
+
+selector {
+  transition: property duration timing-function delay;
+}
+/* we can use the 'all' value in the property to affect all properties */
+
+/* Example */
+
+/* Suppose you want to smoothly change the background color of a button when the user hovers over it: */
+.my-button {
+  background-color: #4f46e5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.my-button:hover {
+  background-color: #372eb1;
+}
+/* 
+Explanation
+transition: background-color 0.3s ease;: This specifies that the background-color property
+should transition over 0.3 seconds using the ease timing function.
+.my-button:hover { background-color: #372eb1; }: When the user hovers over the button, 
+the background color changes to #372eb1.
+Transition Properties
+property: The name of the CSS property you want to add a transition effect to 
+(e.g., background-color, width, height, etc.). You can use all to apply transitions to all 
+properties.
+duration: The duration of the transition (e.g., 0.5s for half a second, 1s for one second).
+timing-function: The speed curve of the transition effect (e.g., ease, linear, ease-in, ease-out, 
+ease-in-out, cubic-bezier).
+delay: The delay before the transition starts (e.g., 0s, 1s).
+*/
