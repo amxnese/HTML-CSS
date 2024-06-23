@@ -61,6 +61,7 @@ body {
   border-width: 0 4px 3px 4px; /* a shorthand as padding and margin */
   border-color: rgb(119, 119, 119); /* a shorthand also */
   border-style: solid solid dashed; /* also a shorthand */
+  border-radius: 5px; /* sets the border radius (corners) of an element to 5px */
 }
 
 element {
@@ -159,5 +160,73 @@ element {
   cursor: wait;
 }
 .img-cursor {
-  cursor: url('../imgs/windows.jpg'), auto;
+  cursor: url("../imgs/windows.jpg"), auto;
+}
+
+/* 
+The z-index property in CSS controls the stacking order of elements on a web page. 
+Elements with a higher z-index value will be displayed in front of elements with a 
+lower z-index value.
+*/
+.element {
+  z-index: 999;
+}
+
+/* 
+The box-shadow property in CSS is used to add shadow effects to elements. Here's a
+basic overview of its syntax and usage:
+
+Syntax
+*/
+element {
+  box-shadow: [horizontal offset] [vertical offset] [blur radius] [spread
+    radius] [color];
+}
+/* 
+Horizontal offset (mandatory): Specifies the horizontal distance of the shadow. 
+Positive values place the shadow to the right, and negative values to the left.
+Vertical offset (mandatory): Specifies the vertical distance of the shadow. 
+Positive values place the shadow below, and negative values above.
+Blur radius (optional): Defines the blur radius. The higher the number, 
+the more blurred the shadow will be. Defaults to 0 (sharp shadow).
+Spread radius (optional): Specifies the spread of the shadow. 
+Positive values expand the shadow, and negative values contract it.
+Color (optional): Defines the color of the shadow. If not specified, 
+it defaults to the text color.
+*/
+
+/* 
+Examples
+Basic Shadow
+*/
+.box {
+  box-shadow: 10px 10px 5px grey; /*This adds a shadow that is 10px to the right and 10px down, with a 5px blur radius and a grey color.*/
+}
+
+/* Spread and Color */
+.box {
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5); /*This adds a shadow with a 5px horizontal offset, 5px vertical offset, 10px blur radius, 2px spread radius, and a semi-transparent black color.*/
+}
+
+/* Inset Shadow */
+.box {
+  box-shadow: inset 0px 0px 10px #000000; /*This adds an inset shadow (inside the element) with a 10px blur radius and black color.  */
+}
+
+/* Multiple Shadows */
+.box {
+  box-shadow: 3px 3px 5px blue, -2px -2px 10px red; /*This adds two shadows: one with a 3px horizontal and vertical offset, 5px blur radius, and blue color, and another with a -2px horizontal and vertical offset, 10px blur radius, and red color.*/
+}
+
+/* 
+The box-sizing property in CSS controls how the total width and height of an element are 
+calculated. It determines whether the dimensions of an element include the padding and 
+border or not. There are two main values for box-sizing:
+
+content-box (default)
+border-box
+*/
+element {
+  box-sizing: content-box;
+  box-sizing: border-box;
 }
