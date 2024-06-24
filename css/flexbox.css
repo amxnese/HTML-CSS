@@ -1,0 +1,115 @@
+/* 
+Flexbox (Flexible Box Layout) in CSS is a layout model that allows you to design complex layouts easily and more 
+efficiently. It offers a more flexible and predictable way to align and distribute space among items in a container.
+*/
+/* Here's a basic guide to using Flexbox: */
+
+/* Container Properties */
+
+/* display: The display property must be set to flex or inline-flex to activate Flexbox for the container. */
+.container {
+  display: flex;
+}
+
+/* 
+flex-direction: Defines the direction of the flex items.
+
+row (default): left to right in ltr; right to left in rtl.
+row-reverse: right to left in ltr; left to right in rtl.
+column: top to bottom.
+column-reverse: bottom to top.
+*/
+.container {
+  flex-direction: column;
+}
+
+/* 
+justify-content: Defines the alignment along the main axis (horizontal by default).
+
+flex-start (default): items are packed toward the start of the flex-direction.
+flex-end: items are packed toward the end.
+center: items are centered.
+space-between: items are evenly distributed with the first item at the start and the last item at the end.
+space-around: items are evenly distributed with equal space around them.
+space-evenly: items are distributed with equal space around them, including space before the first and after
+the last items.
+*/
+.container {
+  justify-content: center;
+}
+
+/* 
+align-items: Defines the default behavior for how flex items are laid out along the cross axis (vertical by default).
+
+stretch (default): stretch to fill the container (still respect min-width/max-width).
+flex-start: cross-start margin edge of the items is placed on the cross-start line.
+flex-end: cross-end margin edge of the items is placed on the cross-end line.
+center: items are centered in the cross-axis.
+baseline: items are aligned such as their baselines align.
+*/
+.container {
+  align-items: center;
+}
+
+/* 
+flex-wrap: Specifies whether flex items should wrap or not.
+
+nowrap (default): all flex items will be on one line.
+wrap: flex items will wrap onto multiple lines, from top to bottom.
+wrap-reverse: flex items will wrap onto multiple lines from bottom to top.
+*/
+.container {
+  flex-wrap: wrap;
+}
+
+/* 
+align-content: Aligns the flex lines (when there is extra space in the cross-axis).
+
+stretch (default): lines stretch to take up the remaining space.
+flex-start: lines are packed toward the start of the flex container.
+flex-end: lines are packed toward the end.
+center: lines are packed toward the center.
+space-between: lines are evenly distributed with the first line at the start and the last line at the end.
+space-around: lines are evenly distributed with equal space around them.
+space-evenly: lines are evenly distributed with equal space around them.
+*/
+.container {
+  align-content: space-between;
+}
+
+
+/* Item Properties */
+
+/* order: Specifies the order of the flex items. Default is 0. */
+.item {
+  order: 1;
+}
+
+/* flex-grow: Specifies how much the item will grow relative to the rest of the flexible items inside the same container. */
+.item {
+  flex-grow: 2;
+}
+
+/* flex-shrink: Specifies how the item will shrink relative to the rest of the flexible items inside the same container. */
+.item {
+  flex-shrink: 1;
+}
+
+/* flex-basis: Specifies the initial main size of the flex item (before any space distribution). */
+.item {
+  flex-basis: 100px;
+}
+
+/* 
+align-self: Allows the default alignment (or the one specified by align-items) to be overridden for individual flex items.
+
+auto (default): the item inherits the align-items value of its parent.
+flex-start: cross-start margin edge of the item is placed on the cross-start line.
+flex-end: cross-end margin edge of the item is placed on the cross-end line.
+center: item is centered in the cross-axis.
+baseline: item is aligned such as its baseline aligns with the baseline of the parent.
+stretch: stretch to fill the container (still respect min-width/max-width).
+*/
+.item {
+  align-self: flex-end;
+}
