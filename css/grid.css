@@ -1,0 +1,49 @@
+/* 
+CSS Grid Layout is a powerful tool for creating flexible and responsive grid-based designs. It allows you to
+define rows and columns and place items within this grid in an efficient manner. Here’s a basic guide on how 
+to use CSS Grid:
+*/
+
+/* 
+Basic Structure
+To create a grid layout, you first need a container element with a display: grid; property. Inside this container, 
+you place child elements that will be laid out within the grid.
+*/
+
+
+/* 
+Advanced Features
+CSS Grid also supports more advanced features like defining specific areas, 
+spanning items across multiple rows or columns, and responsive design.
+*/
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+      'header header header'
+      'sidebar content content'
+      'footer footer footer';
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.content {
+  grid-area: content;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* Responsive Design
+You can use media queries to create a responsive grid layout. */
+@media (max-width: 600px) {
+  .grid-container {
+      grid-template-columns: 1fr; /* Single column layout for small screens */
+  }
+}
