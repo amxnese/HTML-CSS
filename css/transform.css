@@ -1,0 +1,74 @@
+/* 
+In CSS, the transform property allows you to apply 2D or 3D transformations to an element. 
+This property can be used to rotate, scale, skew, or translate an element. 
+Here are some common transformations:
+*/
+
+/* Translate: Moves the element from its current position. */
+/* transform: translate(x, y); */
+/* Example: */
+element {
+  transform: translate(50px, 100px);
+}
+
+/* Rotate: Rotates the element around a fixed point. */
+/* transform: rotate(angle); */
+
+/* Example: */
+element {
+  transform: rotate(45deg);
+}
+
+/* Scale: Changes the size of the element. */
+/* transform: scale(x, y); */
+
+/* Example: */
+element {
+  transform: scale(1.5, 2);
+}
+
+/* Skew: Skews the element along the X and/or Y axis. */
+/* transform: skew(x-angle, y-angle); */
+/* Example: */
+element {
+  transform: skew(30deg, 20deg);
+}
+
+/* Matrix: Combines all the 2D transform functions into one. */
+/* transform: matrix(a, b, c, d, e, f); */
+/* Example: */
+
+element {
+  transform: matrix(1, 0.5, -0.5, 1, 0, 0);
+}
+
+/* Translate3d, Scale3d, Rotate3d: Apply 3D transformations. */
+/* transform: translate3d(x, y, z);
+transform: scale3d(x, y, z);
+transform: rotate3d(x, y, z, angle); */
+/* Examples: */
+element {
+  transform: translate3d(50px, 100px, 30px);
+  transform: scale3d(1.5, 2, 0.5);
+  transform: rotate3d(1, 1, 1, 45deg);
+}
+
+/* Here is an example combining multiple transformations: */
+.element {
+  transform: translate(50px, 100px) rotate(45deg) scale(1.5);
+}
+
+/* Transform Origin
+You can set the origin of the transformation using the transform-origin property. 
+By default, this origin is the center of the element. */
+.element {
+  transform-origin: 50% 50%;
+  transform: rotate(45deg);
+}
+
+/* The transform-origin property can take length values, percentage values, 
+or predefined keywords like top, left, right, bottom, and center. */
+.element {
+  transform-origin: left bottom;
+  transform: rotate(45deg);
+}
