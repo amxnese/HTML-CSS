@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Example</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */
+            grid-gap: 10px; /* Gap between the grid items */
+            padding: 10px;
+        }
+
+        .grid-item {
+            background-color: #4f46e5; /* User's preferred color */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+</body>
+</html>
+
+<!-- 
+Explanation
+Grid Container: The .grid-container class is assigned to the parent element. 
+The display: grid; property is used to enable the grid layout.
+Grid Template Columns: The grid-template-columns property defines the number of columns and their widths. In this example, repeat(3, 1fr) creates 3 columns with equal width. The 1fr unit represents a fraction of the available space.
+Grid Gap: The grid-gap property sets the gap between grid items.
+Grid Item: Each child element of the grid container is a grid item. The .grid-item class styles these items.
+-->
