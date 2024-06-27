@@ -1,0 +1,121 @@
+/* 
+In CSS, @keyframes is used to create animations by specifying a sequence of styles for an element to go through
+at certain times. Each stage of the animation is defined within a @keyframes rule, which consists of multiple 
+"keyframes" that specify the styles at various points during the animation.
+*/
+
+/* Basic Syntax */
+
+/* Here's the basic syntax for defining keyframes: */
+
+@keyframes animation-name {
+  0% {
+    /* Starting styles */
+  }
+  50% {
+    /* Midway styles */
+  }
+  100% {
+    /* Ending styles */
+  }
+}
+
+/* Example */
+
+/* Let's create a simple animation that changes the background color of an element from red to blue over 2 seconds: */
+@keyframes colorChange {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+
+.element {
+  animation: colorChange 2s infinite;
+}
+
+/* Using Percentage and "From/To" */
+
+/* You can use percentages to specify keyframes, or you can use the keywords from and to which
+are equivalent to 0% and 100% respectively. */
+@keyframes example {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Advanced Example */
+
+/* Here’s a more complex example that combines multiple transformations: */
+@keyframes complexAnimation {
+  0% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(100px) scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.element {
+  animation: complexAnimation 3s ease-in-out infinite;
+}
+
+/* 
+Animation Properties
+When you apply an animation, you can control various aspects of it using the following properties:
+
+animation-name: Specifies the name of the @keyframes to use.
+animation-duration: Specifies the duration of the animation.
+animation-timing-function: Specifies the timing function (e.g., ease, linear, ease-in, ease-out, ease-in-out).
+animation-delay: Specifies a delay before the animation starts.
+animation-iteration-count: Specifies how many times the animation should run (e.g., infinite for continuous repetition).
+animation-direction: Specifies whether the animation should play forwards, backwards, 
+or alternate (e.g., normal, reverse, alternate, alternate-reverse).
+animation-fill-mode: Specifies the styles to apply before the animation starts, after it ends, 
+or both (e.g., none, forwards, backwards, both).
+animation-play-state: Specifies whether the animation is running or paused.
+*/
+
+/* Applying Multiple Animations
+You can apply multiple animations to an element by separating each animation property with a comma: */
+.element {
+  animation: colorChange 2s infinite, complexAnimation 3s ease-in-out infinite;
+}
+
+/* Example with All Properties
+Here's an example that uses all the animation properties: */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.element {
+  animation-name: slideIn;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+/* 
+By using @keyframes and the various animation properties, you can create complex and visually appealing 
+animations to enhance your website.
+*/
