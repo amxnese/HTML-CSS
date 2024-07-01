@@ -1,0 +1,122 @@
+/* 
+Media queries in CSS are a powerful tool for creating responsive web designs that adjust their layout and appearance 
+based on the characteristics of the device or viewport. They allow you to apply different styles for different screen 
+sizes, orientations, and other features.
+
+Here's a basic overview of how media queries work:
+*/
+
+/* 
+Basic Syntax
+A media query consists of a media type and at least one condition that must be met for the styles to be applied. 
+The general syntax looks like this:
+*/
+@media (condition) {
+  /* CSS rules */
+}
+
+/* Example
+Here's an example of a media query that changes the background color of a div element based on the screen width: */
+/* Default styles */
+div {
+  background-color: blue;
+}
+
+/* Styles for screens wider than 600px */
+@media (min-width: 600px) {
+  div {
+    background-color: green;
+  }
+}
+
+/* Styles for screens wider than 900px */
+@media (min-width: 900px) {
+  div {
+    background-color: red;
+  }
+}
+
+
+/* Common Conditions
+Width and Height:
+min-width and max-width: Apply styles when the viewport is at least or at most a certain width.
+min-height and max-height: Apply styles when the viewport is at least or at most a certain height. */
+@media (min-width: 768px) {
+  /* Styles for tablets and larger devices */
+}
+
+@media (max-width: 767px) {
+  /* Styles for mobile devices */
+}
+
+/* Orientation:
+orientation: portrait: Apply styles when the device is in portrait mode.
+orientation: landscape: Apply styles when the device is in landscape mode. */
+@media (orientation: portrait) {
+  /* Styles for portrait mode */
+}
+
+@media (orientation: landscape) {
+  /* Styles for landscape mode */
+}
+
+
+/* Resolution:
+min-resolution and max-resolution: Apply styles based on the screen resolution. */
+@media (min-resolution: 2dppx) {
+  /* Styles for high-resolution screens */
+}
+
+/* Combining Conditions
+You can combine multiple conditions using logical operators such as and, not, and only. */
+/* Styles for screens wider than 600px and in landscape mode */
+@media (min-width: 600px) and (orientation: landscape) {
+  /* CSS rules */
+}
+
+
+/* Responsive Design Example
+A more comprehensive example of using media queries for a responsive layout: */
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+header, footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+main {
+  padding: 1em;
+}
+
+/* Styles for tablets and larger devices */
+@media (min-width: 768px) {
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+
+/* Styles for desktop and larger devices */
+@media (min-width: 1024px) {
+  header, footer {
+    text-align: left;
+    padding: 2em;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  main article {
+    flex: 1 1 calc(50% - 1em);
+    margin: 0.5em;
+  }
+}
