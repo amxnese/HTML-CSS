@@ -1,0 +1,138 @@
+/* 
+CSS selectors are patterns used to select the elements you want to style in a web page. 
+They allow you to apply styles to HTML elements based on various criteria, such as element type, 
+class, ID, attribute, and more. Here are some of the most common CSS selectors:
+*/
+
+/* Basic Selectors */
+
+/* Universal Selector (*)
+
+Selects all elements. */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Type Selector (element)
+
+Selects all elements of a given type.*/
+p {
+  font-size: 16px;
+}
+
+/* Class Selector (.class)
+Selects all elements with the specified class. */
+.container {
+  width: 100%;
+}
+
+/* ID Selector (#id)
+Selects the element with the specified ID. */
+#header {
+  background-color: blue;
+}
+
+/* Attribute Selector ([attribute])
+Selects elements with a specified attribute. */
+[type="text"] {
+  border: 1px solid #000;
+}
+
+
+/* Combinators */
+
+/* Descendant Selector (space)
+Selects all elements that are descendants of a specified element. */
+div p {
+  color: red;
+}
+
+/* Child Selector (>)
+Selects all elements that are direct children of a specified element. */
+ul > li {
+  list-style: none;
+}
+
+/* Adjacent Sibling Selector (+)
+Selects the element that is directly after another specified element. */
+h1 + p {
+  margin-top: 0;
+}
+
+/* General Sibling Selector (~)
+Selects all elements that are siblings of a specified element. */
+h1 ~ p {
+  color: blue;
+}
+
+/* Pseudo-classes */
+
+/* :hover
+Selects elements when you mouse over them. */
+a:hover {
+  color: red;
+}
+
+/* :focus
+Selects elements when they are focused. */
+input:focus {
+  outline: none;
+}
+
+/* :nth-child(n)
+Selects elements based on their position in a group of siblings. */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Pseudo-elements */
+
+/* ::before
+Inserts content before the content of an element. */
+.content::before {
+  content: "Note: ";
+  font-weight: bold;
+}
+
+/* ::after
+Inserts content after the content of an element. */
+.content::after {
+  content: " End of note.";
+}
+
+/* Attribute Selectors */
+
+/* [attribute|=value]
+Selects elements with an attribute value starting with a specified value. */
+[lang|=en] {
+  color: green;
+}
+
+/* [attribute^=value]
+Selects elements with an attribute value beginning with a specified value. */
+a[href^="https"] {
+  color: blue;
+}
+
+/* [attribute$=value]
+Selects elements with an attribute value ending with a specified value. */
+a[href$=".pdf"] {
+  color: red;
+}
+
+/* [attribute*=value]
+Selects elements with an attribute value containing a specified value. */
+a[href*="example"] {
+  color: purple;
+}
+
+/* first child */
+p:first-child {
+  color: blue;
+}
+
+/* last child */
+p:last-child {
+  background: cyan;
+}
